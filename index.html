@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Open+Sans|Raleway:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Phototime</title>
+</head>
+<body>
+
+
+<!-- Sprite -->
+
+<svg style="display: none">
+
+    <symbol id="twitter" viewBox="0 0 512 512">
+        <g>
+            <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+			c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+			c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+			c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+			c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+			c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+			C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+			C480.224,136.96,497.728,118.496,512,97.248z"/>
+        </g>
+    </symbol>
+
+    <symbol id="linkedin" viewBox="0 0 430.117 430.117">
+        <g>
+            <path id="LinkedIn" d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+		c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+		v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+		C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+		c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+		 M5.477,420.56h92.184v-277.32H5.477V420.56z"/>
+        </g>
+    </symbol>
+
+    <symbol id="basketball" viewBox="0 0 512.0007 512">
+        <g>
+            <path
+                    d="m436.160156 436.117188c48.558594-48.558594 75.492188-112.9375 75.835938-181.28125.347656-68.402344-25.976563-132.582032-74.117188-180.71875 0 0 0 0 0-.003907-47.832031-47.824219-111.5-74.113281-179.410156-74.113281-.441406 0-.882812 0-1.328125.00390625-68.351563.34374975-132.734375 27.27734375-181.296875 75.83203175-48.5625 48.558593-75.496094 112.9375-75.83984375 181.28125-.34375025 68.398437 25.97656275 132.582031 74.11718775 180.71875 47.832031 47.824218 111.5 74.113281 179.410156 74.113281.441406 0 .882812 0 1.328125-.003907.085937 0 .175781-.003906.261719-.003906.390625.03125.78125.058594 1.175781.058594.289063 0 .578125-.007812.871094-.023438.253906-.015624.5-.054687.75-.082031 67.210937-1.121093 130.402343-27.949219 178.238281-75.777343h.003906c-.003906 0-.003906 0 0 0zm-405.242187-157.230469c60.039062-2.34375 116.578125-25.257813 161.453125-65.320313l42.414062 42.410156-149.695312 149.679688c-31.179688-35.59375-49.957032-79.597656-54.171875-126.769531zm55.882812-170.882813 84.316407 84.308594c-39.355469 34.617188-88.648438 54.441406-140.902344 56.582031 2.15625-52.285156 21.980468-101.550781 56.585937-140.890625zm393.476563 117.507813c-60.484375 4.441406-117.003906 29.851562-160.929688 72.59375l-42.132812-42.128907 149.695312-149.679687c29.511719 33.683594 47.90625 74.90625 53.367188 119.214844zm-224.277344 9.25-42.410156-42.40625c20.453125-22.902344 36.476562-48.878907 47.695312-77.421875 10.613282-27.003906 16.511719-55.195313 17.632813-84.011719 47.171875 4.214844 91.183593 22.988281 126.777343 54.160156zm-22.636719-130.800781c-9.703125 24.683593-23.484375 47.203124-41.03125 67.140624l-84.316406-84.308593c39.339844-34.605469 88.617187-54.425781 140.910156-56.578125-1.039062 25.289062-6.242187 50.035156-15.5625 73.746094zm22.636719 173.226562 43.0625 43.0625c-37.132812 45.59375-57.722656 102.585938-58.113281 161.34375-50.109375-2.742188-97.070313-21.824219-134.644531-54.722656zm14.949219 204.101562c.445312-50.71875 17.945312-99.929687 49.457031-139.699218l83.582031 83.570312c-37.363281 32.859375-83.679687 52.398438-133.039062 56.128906zm69.613281-161.972656c38.667969-37.492187 88.304688-59.832031 141.421875-63.851562-.464844 55.097656-20.507813 107.246094-56.78125 148.484375zm0 0"/>
+        </g>
+    </symbol>
+
+    <symbol id="checked" viewBox="0 0 26 26">
+        <g>
+            <path d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"/>
+        </g>
+    </symbol>
+
+    <symbol id="apple" viewBox="0 0 305 305">
+        <g>
+            <path d="M40.738,112.119c-25.785,44.745-9.393,112.648,19.121,153.82C74.092,286.523,88.502,305,108.239,305
+		c0.372,0,0.745-0.007,1.127-0.022c9.273-0.37,15.974-3.225,22.453-5.984c7.274-3.1,14.797-6.305,26.597-6.305
+		c11.226,0,18.39,3.101,25.318,6.099c6.828,2.954,13.861,6.01,24.253,5.815c22.232-0.414,35.882-20.352,47.925-37.941
+		c12.567-18.365,18.871-36.196,20.998-43.01l0.086-0.271c0.405-1.211-0.167-2.533-1.328-3.066c-0.032-0.015-0.15-0.064-0.183-0.078
+		c-3.915-1.601-38.257-16.836-38.618-58.36c-0.335-33.736,25.763-51.601,30.997-54.839l0.244-0.152
+		c0.567-0.365,0.962-0.944,1.096-1.606c0.134-0.661-0.006-1.349-0.386-1.905c-18.014-26.362-45.624-30.335-56.74-30.813
+		c-1.613-0.161-3.278-0.242-4.95-0.242c-13.056,0-25.563,4.931-35.611,8.893c-6.936,2.735-12.927,5.097-17.059,5.097
+		c-4.643,0-10.668-2.391-17.645-5.159c-9.33-3.703-19.905-7.899-31.1-7.899c-0.267,0-0.53,0.003-0.789,0.008
+		C78.894,73.643,54.298,88.535,40.738,112.119z"/>
+            <path d="M212.101,0.002c-15.763,0.642-34.672,10.345-45.974,23.583c-9.605,11.127-18.988,29.679-16.516,48.379
+		c0.155,1.17,1.107,2.073,2.284,2.164c1.064,0.083,2.15,0.125,3.232,0.126c15.413,0,32.04-8.527,43.395-22.257
+		c11.951-14.498,17.994-33.104,16.166-49.77C214.544,0.921,213.395-0.049,212.101,0.002z"/>
+        </g>
+    </symbol>
+
+    <symbol id="android" viewBox="0 0 505.145 505.145">
+        <g>
+            <path d="M68.541,164.715h-1.294c-16.588,0-30.113,13.568-30.113,30.113v131.107
+				c0,16.61,13.525,30.134,30.113,30.134h1.316c16.588,0,30.113-13.568,30.113-30.134V194.827
+				C98.654,178.283,85.108,164.715,68.541,164.715z"/>
+            <path d="M113.085,376.54c0,15.229,12.446,27.632,27.675,27.632h29.574v70.817
+				c0,16.631,13.568,30.156,30.113,30.156h1.294c16.61,0,30.156-13.546,30.156-30.156v-70.817h41.33v70.817
+				c0,16.631,13.611,30.156,30.156,30.156h1.273c16.609,0,30.134-13.546,30.134-30.156v-70.817h29.595
+				c15.207,0,27.654-12.403,27.654-27.632V169.525H113.085V376.54z"/>
+            <path d="M322.041,43.983l23.491-36.26c1.51-2.287,0.841-5.414-1.467-6.903
+				c-2.286-1.51-5.414-0.884-6.903,1.467l-24.353,37.512c-18.27-7.485-38.676-11.691-60.226-11.691
+				c-21.571,0-41.934,4.206-60.247,11.691l-24.31-37.512c-1.488-2.351-4.638-2.977-6.946-1.467
+				c-2.308,1.488-2.977,4.616-1.467,6.903l23.512,36.26c-42.387,20.773-70.968,59.924-70.968,104.834
+				c0,2.761,0.173,5.479,0.41,8.175h280.053c0.237-2.696,0.388-5.414,0.388-8.175C393.009,103.907,364.406,64.756,322.041,43.983z
+				 M187.655,108.911c-7.442,0-13.482-5.997-13.482-13.46c0-7.463,6.04-13.439,13.482-13.439c7.485,0,13.482,5.975,13.482,13.439
+				S195.097,108.911,187.655,108.911z M317.49,108.911c-7.442,0-13.482-5.997-13.482-13.46c0-7.463,6.04-13.439,13.482-13.439
+				c7.463,0,13.46,5.975,13.46,13.439C330.95,102.914,324.953,108.911,317.49,108.911z"/>
+            <path d="M437.876,164.715h-1.251c-16.588,0-30.156,13.568-30.156,30.113v131.107
+				c0,16.61,13.59,30.134,30.156,30.134h1.273c16.609,0,30.113-13.568,30.113-30.134V194.827
+				C468.011,178.283,454.464,164.715,437.876,164.715z"/>
+        </g>
+    </symbol>
+
+</svg>
+
+    <!-- Header -->
+    <header class="header">
+            <div class="header__inner">
+                <nav class="nav">
+                    <a class="nav__link" href="#">Home</a>
+                    <a class="nav__link" href="#">Photoapp</a>
+                    <a class="nav__link" href="#"><img src="img/phototime-logo.png" alt=""></a>
+                    <a class="nav__link" href="#">Design</a>
+                    <a class="nav__link" href="#">Download</a>
+                </nav>
+
+                <button class="nav-toggle" type="button">
+                    <span class="nav-toggle__item">Menu</span>
+                </button>
+            </div>
+    </header>
+
+    <!-- Intro -->
+<div class="page">
+    <div class="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <h1 class="intro__title">your life , a photo</h1>
+                <h3 class="intro__subtitle"> print your life in a simple photo</h3>
+                <a class="btn btn--green" href="#">Get Started</a>
+            </div>
+            <div class="social">
+                <a class="social__item" href="#" target="_blank">
+                    <svg class="social__icon">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a>
+                <a class="social__item" href="#" target="_blank">
+                    <svg class="social__icon">
+                        <use xlink:href="#linkedin"></use>
+                    </svg>
+                </a>
+                <a class="social__item" href="#" target="_blank">
+                    <svg class="social__icon">
+                        <use xlink:href="#basketball"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Works -->
+    <div class="work1">
+        <div class="container">
+            <div class="works__inner">
+                <div class="works__text">
+                    <h1 class="works__title">Rappresent your life with a  simple photo</h1>
+                    <h3 class="works__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis, eaque eius explicabo in inventore labore necessitatibus nulla officia quo recusandae sed voluptates? Aut eum fugit iusto sapiente sed vel.
+                    </h3>
+                    <a class="btn btn--green" href="#">Get Started</a>
+                </div>
+                <div class="works__pic">
+                    <img src="img/works/1.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="work2">
+        <div class="container">
+            <div class="works__inner">
+                <div class="works__pic">
+                    <img src="img/works/2.jpg" alt="">
+                </div>
+                <div class="works__text">
+                    <h1 class="works__title">Design</h1>
+                    <h3 class="works__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis, eaque eius explicabo in inventore labore necessitatibus nulla officia quo recusandae sed voluptates? Aut eum fugit iusto sapiente sed vel.
+                    </h3>
+                    <a class="btn btn--green" href="#">Learn More</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="work3">
+        <div class="container">
+            <div class="works__inner">
+                <div class="works__item">
+                    <img src="img/works/4.png" alt="">
+                    <h4 class="work3_title">our community</h4>
+                    <p class="work3__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                </div>
+                <div class="works__item">
+                    <img src="img/works/5.jpg" alt="">
+                </div>
+                <div class="works__item">
+                    <img src="img/works/6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Subscribe -->
+    <div class="subscribe">
+        <h2 class="subscribe__title">subscribe to us community</h2>
+        <form class="subscribe_e" action="#">
+            <input class="subscribe__input" type="email" name="name" placeholder="Your Email">
+            <button class="subscribe__btn" type="submit">
+                <svg class="subscribe__check">
+                    <use xlink:href="#checked"></use>
+                </svg>
+            </button>
+        </form>
+    </div>
+
+
+    <!-- Download -->
+    <div class="download">
+        <div class="container">
+            <div class="download__inner">
+                <div class="download__text">
+                    <h2 class="download__title">Download it</h2>
+                    <p class="download__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+                        amet at ea enim eum nisi
+                        omnis quas quis? Animi cupiditate distinctio esse illo ipsam laborum natus nisi quae quo ullam.</p>
+                </div>
+                <div class="download__form">
+                    <div class="download__item">
+                        <a href="https://play.google.com/store" target="_blank" class="download__name">Apple store</a>
+                        <button class="download__btn" type="submit">
+                            <svg class="download__icon">
+                                <use xlink:href="#apple"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="download__item">
+                        <a href="https://www.apple.com/ru/ios/app-store/" target="_blank" class="download__name">play store</a>
+                        <button class="download__btn" type="submit">
+                            <svg class="download__icon">
+                                <use xlink:href="#android"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <nav class="footer__nav">
+                    <a class="nav__link__footer" href="#">Credits</a>
+                    <span class="link__line">|</span>
+                    <a class="nav__link__footer" href="#">Privasy</a>
+                    <span class="link__line">|</span>
+                    <a class="nav__link__footer" href="#">Our Teams</a>
+
+                    <p class="copyright">Copyright by phototime - all right reserved</p>
+                </nav>
+
+                <div class="footer__logo">
+                    <img src="img/Livello%202%20copia.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+
+
+</html>
